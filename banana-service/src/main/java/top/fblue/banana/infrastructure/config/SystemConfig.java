@@ -1,4 +1,4 @@
-package top.fblue.bananaservice.infrastructure.config;
+package top.fblue.banana.infrastructure.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

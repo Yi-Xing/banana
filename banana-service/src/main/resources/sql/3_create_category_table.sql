@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS category
+(
+    `id`           INT AUTO_INCREMENT COMMENT 'ID',
+    `name`         VARCHAR(20)  NOT NULL COMMENT '名称',
+    `code`         VARCHAR(255) NOT NULL COMMENT 'code',
+    `order_num`    INT          NOT NULL COMMENT '显示顺序',
+    `state`        TINYINT      NOT NULL COMMENT '状态;1 启用 2 禁用',
+    `remark`       VARCHAR(500) NOT NULL COMMENT '备注',
+    `created_by`   INT          NOT NULL COMMENT '创建人',
+    `created_time` DATETIME     NOT NULL COMMENT '创建时间',
+    `updated_by`   INT          NOT NULL COMMENT '更新人',
+    `updated_time` DATETIME     NOT NULL COMMENT '更新时间',
+    `is_deleted`   TINYINT      NOT NULL COMMENT '是否删除;0 未删除 1 已删除',
+    PRIMARY KEY (id)
+) COMMENT = '分类表';

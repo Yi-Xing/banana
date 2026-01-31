@@ -1,24 +1,22 @@
 package top.fblue.banana.domain.file.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 /**
- * 文件实体
+ * 文件
  *
  * @author banana
  */
 @Data
 @Builder(toBuilder = true)
+@EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @AllArgsConstructor
-public class FileEntity {
+public class File {
 
-    private Integer id;
+    private Long id;
     private String name;
     private String storageId;
     private Integer size;
@@ -27,9 +25,9 @@ public class FileEntity {
     private String remark;
     private Integer state;
     private LocalDateTime deletedTime;
-    private Integer createdBy;
+    private Long createdBy;
     private LocalDateTime createdTime;
-    private Integer updatedBy;
+    private Long updatedBy;
     private LocalDateTime updatedTime;
     private Integer isDeleted;
 }

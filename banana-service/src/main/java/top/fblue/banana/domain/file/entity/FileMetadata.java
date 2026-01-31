@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
 
 /**
- * 文件分类关系实体
+ * 文件元信息
  *
  * @author banana
  */
@@ -16,14 +16,18 @@ import java.time.LocalDateTime;
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class FileCategoryEntity {
+public class FileMetadata {
 
-    private Integer id;
-    private Integer fileId;
-    private Integer categoryId;
-    private Integer createdBy;
+    private Long id;
+    private Long fileId;
+    private String fileExt;
+    private Integer fileSize;
+    private Integer imgHeight;
+    private Integer imgWidth;
+    private Integer imgResolution;
+    private Long createdBy;
     private LocalDateTime createdTime;
-    private Integer updatedBy;
+    private Long updatedBy;
     private LocalDateTime updatedTime;
     private Integer isDeleted;
 }

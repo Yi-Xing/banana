@@ -1,14 +1,13 @@
 package top.fblue.banana.infrastructure.po;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 import top.fblue.framework.po.BaseAuditPo;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+
 
 /**
  * 文件表
@@ -16,6 +15,7 @@ import java.time.LocalDateTime;
  * @author banana
  */
 @Data
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)

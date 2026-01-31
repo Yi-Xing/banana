@@ -1,6 +1,6 @@
 package top.fblue.banana.domain.file.service;
 
-import top.fblue.banana.domain.file.entity.FileEntity;
+import top.fblue.banana.domain.file.entity.File;
 
 /**
  * 文件服务接口
@@ -9,34 +9,15 @@ import top.fblue.banana.domain.file.entity.FileEntity;
  */
 public interface FileService {
 
-    /**
-     * 根据ID查询
-     *
-     * @param id ID
-     * @return 文件实体
-     */
-    FileEntity getById(Integer id);
+    /** 根据ID查询 */
+    File getById(Long id);
 
-    /**
-     * 创建文件
-     *
-     * @param entity 文件实体
-     * @return 创建后的实体
-     */
-    FileEntity create(FileEntity entity);
+    /** 创建文件 */
+    File create(File entity);
 
-    /**
-     * 更新文件
-     *
-     * @param entity 文件实体
-     * @return 更新后的实体
-     */
-    FileEntity update(FileEntity entity);
+    /** 更新文件 */
+    File update(File entity);
 
-    /**
-     * 删除文件
-     *
-     * @param id ID
-     */
-    void delete(Integer id);
+    /** 删除文件 */
+    void delete(Long id);
 }

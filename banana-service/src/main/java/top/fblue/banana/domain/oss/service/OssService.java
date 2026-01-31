@@ -1,6 +1,6 @@
 package top.fblue.banana.domain.oss.service;
 
-import top.fblue.banana.domain.oss.entity.OssEntity;
+import top.fblue.banana.domain.oss.entity.Oss;
 
 /**
  * 对象存储服务接口
@@ -9,34 +9,15 @@ import top.fblue.banana.domain.oss.entity.OssEntity;
  */
 public interface OssService {
 
-    /**
-     * 根据ID查询
-     *
-     * @param id ID
-     * @return 对象存储实体
-     */
-    OssEntity getById(Integer id);
+    /** 根据ID查询 */
+    Oss getById(Long id);
 
-    /**
-     * 创建对象存储
-     *
-     * @param entity 对象存储实体
-     * @return 创建后的实体
-     */
-    OssEntity create(OssEntity entity);
+    /** 创建对象存储 */
+    Oss create(Oss entity);
 
-    /**
-     * 更新对象存储
-     *
-     * @param entity 对象存储实体
-     * @return 更新后的实体
-     */
-    OssEntity update(OssEntity entity);
+    /** 更新对象存储 */
+    Oss update(Oss entity);
 
-    /**
-     * 删除对象存储
-     *
-     * @param id ID
-     */
-    void delete(Integer id);
+    /** 删除对象存储 */
+    void delete(Long id);
 }

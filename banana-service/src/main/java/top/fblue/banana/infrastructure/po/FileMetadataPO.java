@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 import top.fblue.framework.po.BaseAuditPo;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ import java.io.Serializable;
  * @author banana
  */
 @Data
+@SuperBuilder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -24,7 +26,7 @@ public class FileMetadataPO extends BaseAuditPo implements Serializable {
     /**
      * 文件ID
      */
-    private Integer fileId;
+    private Long fileId;
 
     /**
      * 文件扩展名;小写

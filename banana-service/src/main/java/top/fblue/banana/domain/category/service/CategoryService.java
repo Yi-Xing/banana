@@ -1,6 +1,6 @@
 package top.fblue.banana.domain.category.service;
 
-import top.fblue.banana.domain.category.entity.CategoryEntity;
+import top.fblue.banana.domain.category.entity.Category;
 
 /**
  * 分类服务接口
@@ -9,34 +9,15 @@ import top.fblue.banana.domain.category.entity.CategoryEntity;
  */
 public interface CategoryService {
 
-    /**
-     * 根据ID查询
-     *
-     * @param id ID
-     * @return 分类实体
-     */
-    CategoryEntity getById(Integer id);
+    /** 根据ID查询 */
+    Category getById(Long id);
 
-    /**
-     * 创建分类
-     *
-     * @param entity 分类实体
-     * @return 创建后的实体
-     */
-    CategoryEntity create(CategoryEntity entity);
+    /** 创建分类 */
+    Category create(Category entity);
 
-    /**
-     * 更新分类
-     *
-     * @param entity 分类实体
-     * @return 更新后的实体
-     */
-    CategoryEntity update(CategoryEntity entity);
+    /** 更新分类 */
+    Category update(Category entity);
 
-    /**
-     * 删除分类
-     *
-     * @param id ID
-     */
-    void delete(Integer id);
+    /** 删除分类 */
+    void delete(Long id);
 }

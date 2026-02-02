@@ -2,8 +2,8 @@ package top.fblue.banana.domain.file.entity;
 
 import lombok.*;
 import top.fblue.banana.common.enums.FileTypeEnum;
-import top.fblue.framework.enums.DeletedEnum;
-import top.fblue.framework.enums.StateEnum;
+import top.fblue.framework.common.enums.DeletedEnum;
+import top.fblue.framework.common.enums.StateEnum;
 
 import java.time.LocalDateTime;
 

@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-import top.fblue.framework.po.BaseAuditPo;
+import top.fblue.framework.common.po.BaseAuditPo;
 
 import java.io.Serializable;
 

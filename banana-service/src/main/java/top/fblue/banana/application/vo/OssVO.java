@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import top.fblue.framework.enums.StateEnum;
+import top.fblue.framework.common.enums.StateEnum;
 
 import java.time.LocalDateTime;
 

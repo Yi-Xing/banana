@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import top.fblue.banana.common.enums.FileTypeEnum;
-import top.fblue.framework.enums.StateEnum;
-import top.fblue.framework.po.BaseAuditPo;
+import top.fblue.framework.common.enums.StateEnum;
+import top.fblue.framework.common.po.BaseAuditPo;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

@@ -1,6 +1,7 @@
 package top.fblue.banana.infrastructure.converter;
 
 import org.springframework.stereotype.Component;
+import top.fblue.banana.common.enums.FileTypeEnum;
 import top.fblue.banana.domain.file.entity.File;
 import top.fblue.banana.infrastructure.po.FilePO;
 
@@ -22,6 +23,7 @@ public class FilePOConverter {
         return File.builder()
                 .id(po.getId())
                 .name(po.getName())
+                .type(po.getType())
                 .storageId(po.getStorageId())
                 .size(po.getSize())
                 .md5(po.getMd5())
@@ -48,6 +50,7 @@ public class FilePOConverter {
         return FilePO.builder()
                 .id(domain.getId())
                 .name(domain.getName())
+                .type(domain.getType() != null ? domain.getType() : FileTypeEnum.OTHER)
                 .storageId(domain.getStorageId())
                 .size(domain.getSize())
                 .md5(domain.getMd5())

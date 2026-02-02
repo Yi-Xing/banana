@@ -1,6 +1,7 @@
 package top.fblue.banana.domain.file.entity;
 
 import lombok.*;
+import top.fblue.banana.common.enums.FileTypeEnum;
 
 import java.time.LocalDateTime;
 
@@ -18,6 +19,7 @@ public class File {
 
     private Long id;
     private String name;
+    private FileTypeEnum type;
     private String storageId;
     private Integer size;
     private String md5;

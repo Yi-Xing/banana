@@ -3,6 +3,7 @@ package top.fblue.banana.infrastructure.po;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import top.fblue.banana.common.enums.FileTypeEnum;
 import top.fblue.framework.po.BaseAuditPo;
 
 import java.io.Serializable;
@@ -26,6 +27,11 @@ public class FilePO extends BaseAuditPo implements Serializable {
      * 名称;包含后缀
      */
     private String name;
+
+    /**
+     * 文件类型
+     */
+    private FileTypeEnum type;
 
     /**
      * 存储id;oss文件唯一标识

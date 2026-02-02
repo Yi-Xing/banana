@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS file
 (
     `id`           INT AUTO_INCREMENT COMMENT 'ID',
     `name`         VARCHAR(255) NOT NULL COMMENT '名称;包含后缀',
+    `type`         TINYINT      NOT NULL COMMENT '文件类型;1图片 2文档 3压缩包 4程序 5视频 6音频 7其它',
     `storage_id`   VARCHAR(255) NOT NULL COMMENT '存储id;oss文件唯一标识',
     `size`         INT          NOT NULL COMMENT '文件大小',
     `md5`          VARCHAR(255) NOT NULL COMMENT '字节编码;用于去重',

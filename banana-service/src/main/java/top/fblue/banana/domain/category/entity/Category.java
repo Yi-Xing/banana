@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import top.fblue.framework.enums.DeletedEnum;
+import top.fblue.framework.enums.StateEnum;
 
 import java.time.LocalDateTime;
 
@@ -22,11 +24,11 @@ public class Category {
     private String name;
     private String code;
     private Integer orderNum;
-    private Integer state;
+    private StateEnum state;
     private String remark;
     private Long createdBy;
     private LocalDateTime createdTime;
     private Long updatedBy;
     private LocalDateTime updatedTime;
-    private Integer isDeleted;
+    private DeletedEnum isDeleted;
 }

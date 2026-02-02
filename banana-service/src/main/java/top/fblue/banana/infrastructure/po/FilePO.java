@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import top.fblue.banana.common.enums.FileTypeEnum;
+import top.fblue.framework.enums.StateEnum;
 import top.fblue.framework.po.BaseAuditPo;
 
 import java.io.Serializable;
@@ -49,9 +50,9 @@ public class FilePO extends BaseAuditPo implements Serializable {
     private String md5;
 
     /**
-     * ossID
+     * oss表ID;关联oss.id
      */
-    private String ossId;
+    private Long ossId;
 
     /**
      * 备注
@@ -61,7 +62,7 @@ public class FilePO extends BaseAuditPo implements Serializable {
     /**
      * 状态;1 启用 2 禁用
      */
-    private Integer state;
+    private StateEnum state;
 
     /**
      * 删除时间;进入回收站的时间

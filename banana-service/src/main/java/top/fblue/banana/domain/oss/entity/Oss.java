@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import top.fblue.framework.enums.DeletedEnum;
+import top.fblue.framework.enums.StateEnum;
 
 import java.time.LocalDateTime;
 
@@ -22,7 +24,7 @@ public class Oss {
     private String name;
     private Integer type;
     private String code;
-    private Integer state;
+    private StateEnum state;
     private String domainName;
     private String accessKey;
     private String secretKey;
@@ -31,5 +33,5 @@ public class Oss {
     private LocalDateTime createdTime;
     private Long updatedBy;
     private LocalDateTime updatedTime;
-    private Integer isDeleted;
+    private DeletedEnum isDeleted;
 }

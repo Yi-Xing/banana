@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import top.fblue.framework.enums.StateEnum;
 import top.fblue.framework.po.BaseAuditPo;
 
 import java.io.Serializable;
@@ -41,7 +42,7 @@ public class CategoryPO extends BaseAuditPo implements Serializable {
     /**
      * 状态;1 启用 2 禁用
      */
-    private Integer state;
+    private StateEnum state;
 
     /**
      * 备注

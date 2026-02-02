@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import top.fblue.framework.enums.DeletedEnum;
 
 import java.time.LocalDateTime;
 
@@ -29,5 +30,5 @@ public class FileMetadata {
     private LocalDateTime createdTime;
     private Long updatedBy;
     private LocalDateTime updatedTime;
-    private Integer isDeleted;
+    private DeletedEnum isDeleted;
 }

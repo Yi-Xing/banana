@@ -2,6 +2,8 @@ package top.fblue.banana.domain.file.entity;
 
 import lombok.*;
 import top.fblue.banana.common.enums.FileTypeEnum;
+import top.fblue.framework.enums.DeletedEnum;
+import top.fblue.framework.enums.StateEnum;
 
 import java.time.LocalDateTime;
 
@@ -23,13 +25,13 @@ public class File {
     private String storageId;
     private Integer size;
     private String md5;
-    private String ossId;
+    private Long ossId;
     private String remark;
-    private Integer state;
+    private StateEnum state;
     private LocalDateTime deletedTime;
     private Long createdBy;
     private LocalDateTime createdTime;
     private Long updatedBy;
     private LocalDateTime updatedTime;
-    private Integer isDeleted;
+    private DeletedEnum isDeleted;
 }

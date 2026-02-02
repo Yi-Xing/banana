@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import top.fblue.banana.common.enums.OssTypeEnum;
 import top.fblue.framework.common.enums.StateEnum;
 import top.fblue.framework.common.po.BaseAuditPo;
 
@@ -32,7 +33,7 @@ public class OssPO extends BaseAuditPo implements Serializable {
     /**
      * 类型;1 阿里云 2 千牛云
      */
-    private Integer type;
+    private OssTypeEnum type;
 
     /**
      * code

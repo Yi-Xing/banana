@@ -1,11 +1,10 @@
 package top.fblue.banana.application.dto;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
+import top.fblue.banana.common.enums.OssTypeEnum;
 import top.fblue.framework.common.enums.StateEnum;
 
 /**
@@ -23,9 +22,7 @@ public class OssAddDTO {
 
     /** OSS类型；1 阿里云，2 千牛云 */
     @NotNull(message = "OSS类型不能为空")
-    @Min(value = 1, message = "OSS类型为1或2")
-    @Max(value = 2, message = "OSS类型为1或2")
-    private Integer type;
+    private OssTypeEnum type;
 
     /** 唯一标识；1~100字符 */
     @NotBlank(message = "code不能为空")

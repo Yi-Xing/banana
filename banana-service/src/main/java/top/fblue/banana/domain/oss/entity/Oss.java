@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import top.fblue.banana.common.enums.OssTypeEnum;
 import top.fblue.framework.common.enums.DeletedEnum;
 import top.fblue.framework.common.enums.StateEnum;
 
@@ -22,7 +23,7 @@ public class Oss {
 
     private Long id;
     private String name;
-    private Integer type;
+    private OssTypeEnum type;
     private String code;
     private StateEnum state;
     private String domainName;

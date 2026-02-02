@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS file
     `storage_id`   VARCHAR(255) NOT NULL COMMENT '存储id;oss文件唯一标识',
     `size`         INT          NOT NULL COMMENT '文件大小',
     `md5`          VARCHAR(255) NOT NULL COMMENT '字节编码;用于去重',
-    `oss_id`       VARCHAR(255) COMMENT 'ossID',
+    `oss_id`       INT          NOT NULL COMMENT '关联oss.id',
     `remark`       VARCHAR(500) NOT NULL COMMENT '备注',
     `state`        TINYINT      NOT NULL COMMENT '状态;1 启用 2 禁用',
     `deleted_time` DATETIME     NOT NULL COMMENT '删除时间;进入回收站的时间',

@@ -4,15 +4,17 @@ import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 
 /**
- * OSS 类型枚举；1 阿里云，2 千牛云
+ * OSS 类型枚举；1 阿里云，2 七牛云
  *
  * @author banana
  */
 @Getter
 public enum OssTypeEnum {
 
+    /** 阿里云 OSS */
     A_LI_YUN(1, "阿里云"),
-    QI_NIU_YUN(2, "千牛云");
+    /** 七牛云 OSS */
+    QI_NIU_YUN(2, "七牛云");
 
     @EnumValue
     private final int code;

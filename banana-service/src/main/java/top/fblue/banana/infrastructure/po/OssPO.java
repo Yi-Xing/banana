@@ -31,7 +31,7 @@ public class OssPO extends BaseAuditPo implements Serializable {
     private String name;
 
     /**
-     * 类型;1 阿里云 2 千牛云
+     * 类型;1 阿里云 2 七牛云
      */
     private OssTypeEnum type;
 

@@ -20,7 +20,7 @@ public class OssAddDTO {
     @Size(min = 2, max = 10, message = "名称长度为2~10个字符")
     private String name;
 
-    /** OSS类型；1 阿里云，2 千牛云 */
+    /** OSS类型；1 阿里云，2 七牛云 */
     @NotNull(message = "OSS类型不能为空")
     private OssTypeEnum type;
 

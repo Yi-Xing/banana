@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS oss
 (
     `id`           INT AUTO_INCREMENT COMMENT 'ID',
     `name`         VARCHAR(20)  NOT NULL COMMENT '名称',
-    `type`         TINYINT      NOT NULL COMMENT '类型;1 阿里云 2 千牛云',
+    `type`         TINYINT      NOT NULL COMMENT '类型;1 阿里云 2 七牛云',
     `code`         VARCHAR(255) NOT NULL COMMENT 'code',
     `state`        TINYINT      NOT NULL COMMENT '状态;1 启用 2 禁用',
     `domain_name`  VARCHAR(128) NOT NULL COMMENT '域名',

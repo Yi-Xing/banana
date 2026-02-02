@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import top.fblue.banana.common.enums.OssTypeEnum;
 
 /**
- * OssTypeEnum 序列化/反序列化：请求/响应中均按数字 code 处理（1 阿里云，2 千牛云）。
+ * OssTypeEnum 序列化/反序列化：请求/响应中均按数字 code 处理（1 阿里云，2 七牛云）。
  *
  * @author banana
  */

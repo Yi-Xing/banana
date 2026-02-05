@@ -17,6 +17,20 @@
             <version>${revision}</version>
         </dependency>
 
+        <!-- 用户模块 -->
+        <dependency>
+            <groupId>top.fblue</groupId>
+            <artifactId>watermelon-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- Dubbo RPC 调用 -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
         <!-- 测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

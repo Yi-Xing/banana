@@ -27,7 +27,11 @@ public class UserRepositoryImpl implements UserRepository {
     /**
      * 直连配置：提供方 dubbo.protocol.port=20880，registry=N/A 时使用 url 直连
      */
-    @DubboReference(url = "${dubbo.consumer.url}")
+    @DubboReference(
+            interfaceClass = UserRpc.class,
+            version = "1.0.0",
+            url = "dubbo://10.42.32.0:20880?anyhost=true"
+    )
     private UserRpc userRpc;
 
     private final UserRpcConverter userRpcConverter;

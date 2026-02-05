@@ -1,5 +1,6 @@
 package top.fblue.banana;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,6 +12,7 @@ import top.fblue.banana.domain.user.repository.UserRepository;
 import java.util.List;
 
 @SpringBootTest
+@EnableDubbo
 class RpcTests {
 
     @Autowired

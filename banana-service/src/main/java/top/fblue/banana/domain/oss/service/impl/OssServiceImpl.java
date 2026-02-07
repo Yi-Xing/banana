@@ -1,9 +1,12 @@
 package top.fblue.banana.domain.oss.service.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import top.fblue.banana.domain.oss.entity.Oss;
 import top.fblue.banana.domain.oss.repository.OssRepository;
 import top.fblue.banana.domain.oss.service.OssService;
+import top.fblue.banana.domain.user.entity.User;
+import top.fblue.banana.domain.user.repository.UserRepository;
 
 /**
  * 对象存储服务实现
@@ -11,12 +14,15 @@ import top.fblue.banana.domain.oss.service.OssService;
  * @author banana
  */
 @Service
+@Slf4j
 public class OssServiceImpl implements OssService {
 
     private final OssRepository ossRepository;
+    private final UserRepository userRepository;
 
-    public OssServiceImpl(OssRepository ossRepository) {
+    public OssServiceImpl(OssRepository ossRepository, UserRepository userRepository) {
         this.ossRepository = ossRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -26,7 +32,10 @@ public class OssServiceImpl implements OssService {
 
     @Override
     public Oss create(Oss entity) {
-        return ossRepository.save(entity);
+        User user = userRepository.findById(1L);
+        log.info("user:{}", user);
+        return null;
+//        return ossRepository.save(entity);
     }
 
     @Override

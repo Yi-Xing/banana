@@ -12,6 +12,7 @@
     <!--项目和api模块的版本号-->
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
+        <dubbo.version>3.3.6</dubbo.version>
     </properties>
 
     <artifactId>banana</artifactId>
@@ -22,15 +23,4 @@
         <module>banana-api</module>
         <module>banana-service</module>
     </modules>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-bom</artifactId>
-                <version>3.3.6</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

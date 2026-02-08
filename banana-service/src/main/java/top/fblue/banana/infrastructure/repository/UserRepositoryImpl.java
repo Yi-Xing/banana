@@ -3,7 +3,6 @@ package top.fblue.banana.infrastructure.repository;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Repository;
-import org.springframework.util.StringUtils;
 import top.fblue.banana.domain.user.entity.User;
 import top.fblue.banana.domain.user.repository.UserRepository;
 import top.fblue.banana.infrastructure.converter.UserRpcConverter;
@@ -24,16 +23,8 @@ import java.util.List;
 @Repository
 public class UserRepositoryImpl implements UserRepository {
 
-    /**
-     * 直连配置：提供方 dubbo.protocol.port=20880，registry=N/A 时使用 url 直连
-     */
-    @DubboReference(
-            interfaceClass = UserRpc.class,
-            version = "1.0.0",
-            url = "dubbo://10.42.32.0:20880?anyhost=true"
-    )
+    @DubboReference(url = "${dubbo.watermelon.url}")
     private UserRpc userRpc;
-
     private final UserRpcConverter userRpcConverter;
 
     public UserRepositoryImpl(UserRpcConverter userRpcConverter) {
@@ -42,13 +33,10 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findById(Long id) {
-        if (id == null) {
-            return null;
-        }
         ApiResponse<UserBaseResponse> resp = userRpc.getUser(id);
         if (resp == null || !resp.getSuccess()) {
             log.error("userRpc.getUser 异常，req:{} res:{}", id, resp);
-            throw new BusinessException("userRpc.getUser 异常");
+            throw new BusinessException(String.format("userRpc.getUser 异常: %s", ApiResponse.getMessage(resp)));
         }
         return userRpcConverter.toDomain(resp.getData());
     }
@@ -61,7 +49,7 @@ public class UserRepositoryImpl implements UserRepository {
         ApiResponse<List<UserBaseResponse>> resp = userRpc.getUserList(userIds);
         if (resp == null || !resp.getSuccess()) {
             log.error("userRpc.getUserList 异常，req:{} res:{}", userIds, resp);
-            throw new BusinessException("userRpc.getUserList 异常");
+            throw new BusinessException(String.format("userRpc.getUserList 异常: %s", ApiResponse.getMessage(resp)));
         }
         return userRpcConverter.toDomainList(resp.getData());
     }

@@ -1,9 +1,11 @@
-package top.fblue.banana.infrastructure.jackson;
+package top.fblue.banana.infrastructure.jackson.config;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import top.fblue.banana.common.enums.OssTypeEnum;
+import top.fblue.banana.infrastructure.jackson.OssTypeEnumDeserializer;
+import top.fblue.banana.infrastructure.jackson.OssTypeEnumSerializer;
 
 /**
  * OssTypeEnum 序列化/反序列化：请求/响应中均按数字 code 处理（1 阿里云，2 七牛云）。

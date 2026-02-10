@@ -32,10 +32,7 @@ public class OssServiceImpl implements OssService {
 
     @Override
     public Oss create(Oss entity) {
-        User user = userRepository.findById(1L);
-        log.info("user:{}", user);
-        return null;
-//        return ossRepository.save(entity);
+        return ossRepository.save(entity);
     }
 
     @Override

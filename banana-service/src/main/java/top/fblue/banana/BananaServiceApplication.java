@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @EnableDubbo
 @SpringBootApplication
-@ComponentScan(basePackages = {"top.fblue.framework"})
+@ComponentScan(basePackages = {"top.fblue.framework", "top.fblue.dubbo"})
 public class BananaServiceApplication {
 
     public static void main(String[] args) {

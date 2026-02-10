@@ -12,7 +12,6 @@
     <!--项目和api模块的版本号-->
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
-        <dubbo.version>3.3.6</dubbo.version>
     </properties>
 
     <artifactId>banana</artifactId>

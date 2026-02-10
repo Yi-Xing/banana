@@ -26,7 +26,7 @@ class RpcTests {
         System.out.println("findById => " + oss);
     }
     @Test
-    void getUse() {
+    void getUser() {
         Long userId = 1L;
 
         User user = userRepository.findById(userId);

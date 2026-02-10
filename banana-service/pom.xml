@@ -10,10 +10,10 @@
     </parent>
     <artifactId>banana-service</artifactId>
     <dependencies>
-        <!-- 公共框架 -->
+        <!-- dubbo + framework -->
         <dependency>
             <groupId>top.fblue</groupId>
-            <artifactId>water-framework</artifactId>
+            <artifactId>water-dubbo</artifactId>
             <version>${revision}</version>
         </dependency>
 
@@ -22,13 +22,6 @@
             <groupId>top.fblue</groupId>
             <artifactId>watermelon-api</artifactId>
             <version>${revision}</version>
-        </dependency>
-
-        <!-- Dubbo RPC 调用 -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>${dubbo.version}</version>
         </dependency>
 
         <!-- 测试 -->
